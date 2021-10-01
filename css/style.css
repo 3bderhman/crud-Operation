@@ -1,0 +1,19 @@
+.search-input,
+.form-input{
+    width: 100%;
+    background-color: transparent;
+    padding: 5px 10px;
+    margin: 6px 0;
+    outline: none;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+.search-input:focus,
+.form-input:focus{
+    border-color: #0d6efd;
+}
+.search-input{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
