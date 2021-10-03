@@ -5,6 +5,26 @@ let productDescInput = document.getElementById("product-desc");
 let callFunctionsInput = document.getElementById("call-functions");
 let updateProductInput = document.getElementById("update-product");
 let searchProductInput = document.getElementById("search-Product");
+let moonElement = document.getElementById("moon");
+let sunElement = document.getElementById("sun");
+
+moonElement.addEventListener("click", function() {
+    moonElement.style.display = "none";
+    sunElement.style.display = "block";
+    document.querySelector("body").style.backgroundColor = "rgb(32, 34, 41)";
+    let elemnt = document.body.getElementsByTagName("*");
+    for (let i = 0; i < elemnt.length; i++) {
+        elemnt[i].style.color = "rgb(255, 255, 255)"
+    }
+})
+sunElement.addEventListener("click", function() {
+    moonElement.style.display = "block";
+    sunElement.style.display = "none";
+    document.querySelector("body").style.backgroundColor = "rgb(255, 255, 255)";
+    let elemnt = document.body.getElementsByTagName("*");
+    for (let i = 0; i < elemnt.length; i++) {
+        elemnt[i].style.color = "rgb(32, 34, 41)"
+    }})
 
 let num = 0;
 let productContainer = [];

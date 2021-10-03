@@ -1,3 +1,46 @@
+*{
+    color: rgb(32, 34, 41);
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+i{
+    font-size: 30px;
+}
+#moon{
+    width: fit-content;
+}
+#sun{
+    display: none;
+    width: fit-content;
+
+}
+.moon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 5px rgb(203 206 209), 
+    inset -1px -1px 5px rgb(255 255 255);
+}
+.moon i{
+    line-height: 1.7;
+    color: rgb(32, 34, 41);
+}
+.sun{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(32, 34, 41);
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 60px rgb(0, 0, 0, 0.3), 
+    inset -1px -1px 20px rgb(0, 0, 0, 0.3);
+}
+.sun i{
+    line-height: 1.7;
+    color: rgb(255, 255, 255);
+}
 .search-input,
 .form-input{
     width: 100%;
@@ -10,7 +53,7 @@
 }
 .search-input:focus,
 .form-input:focus{
-    border-color: #0d6efd;
+    border-color: #00cec9;
 }
 .search-input{
     width: 50%;
