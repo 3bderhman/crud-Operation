@@ -5,26 +5,59 @@ let productDescInput = document.getElementById("product-desc");
 let callFunctionsInput = document.getElementById("call-functions");
 let updateProductInput = document.getElementById("update-product");
 let searchProductInput = document.getElementById("search-Product");
+let iconElement = document.getElementById("icon");
 let moonElement = document.getElementById("moon");
 let sunElement = document.getElementById("sun");
+let elemnt = document.body.getElementsByTagName("*");
 
-moonElement.addEventListener("click", function() {
+if(localStorage.getItem('theme') === 'light') {
+    enableDark();
+}
+iconElement.addEventListener("click", function() {
+    if(localStorage.getItem('theme') === 'dark'){
+        enableDark();
+    }
+    else{
+        enableLight();
+    }
+})
+function enableDark() {
+    localStorage.setItem("theme", "light")
     moonElement.style.display = "none";
     sunElement.style.display = "block";
     document.querySelector("body").style.backgroundColor = "rgb(32, 34, 41)";
-    let elemnt = document.body.getElementsByTagName("*");
     for (let i = 0; i < elemnt.length; i++) {
         elemnt[i].style.color = "rgb(255, 255, 255)"
     }
-})
-sunElement.addEventListener("click", function() {
+}
+function enableLight() {
+    localStorage.setItem("theme", "dark")
     moonElement.style.display = "block";
     sunElement.style.display = "none";
     document.querySelector("body").style.backgroundColor = "rgb(255, 255, 255)";
-    let elemnt = document.body.getElementsByTagName("*");
     for (let i = 0; i < elemnt.length; i++) {
         elemnt[i].style.color = "rgb(32, 34, 41)"
-    }})
+    }
+}
+const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+if(userPrefersDark) {
+    enableDark()
+}
+else{
+    enableLight();
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 let num = 0;
 let productContainer = [];
